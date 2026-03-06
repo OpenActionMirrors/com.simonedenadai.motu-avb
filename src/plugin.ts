@@ -1,4 +1,5 @@
-import streamDeck, { JsonObject, LogLevel } from "@elgato/streamdeck";
+import streamDeck from "@elgato/streamdeck";
+import type { JsonObject } from "@elgato/utils";
 import { MotuApi } from "./motu-avb-api";
 import { ToggleOnOff } from "./actions/toggle-onoff";
 import { ToggleValues } from "./actions/toggle-values";
@@ -8,7 +9,7 @@ import { RawSet } from "./actions/raw-set";
 
 
 // We can enable "trace" logging so that all messages between the Stream Deck, and the plugin are recorded. When storing sensitive information
-streamDeck.logger.setLevel(LogLevel.TRACE);
+streamDeck.logger.setLevel("trace");
 
 // Singleton instance of the MotuApi utlity class
 const motuApi = MotuApi.getInstance();

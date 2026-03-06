@@ -1,7 +1,8 @@
 // MOTU API utility
 // This singleton handles connection and requests to the MOTU device.
 
-import streamDeck, { JsonObject } from "@elgato/streamdeck";
+import streamDeck from "@elgato/streamdeck";
+import type { JsonObject } from "@elgato/utils";
 
 export type MotuDatastoreResponse = Record<string, string | number>;
 export type MotuGetResponse = { value: string | number };
