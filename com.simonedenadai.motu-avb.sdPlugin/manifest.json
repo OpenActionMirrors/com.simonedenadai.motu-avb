@@ -1,6 +1,6 @@
 {
 	"Name": "MOTU AVB",
-	"Version": "2.1.1.0",
+	"Version": "2.2.0.0",
 	"Author": "Simone De Nadai",
 	"URL": "https://github.com/Hecsall/streamdeck-motu-avb",
 	"Actions": [
@@ -94,9 +94,9 @@
 	"CodePath": "bin/plugin.js",
 	"Description": "Control your MOTU Audio interface over MOTU AVB Datastore API",
 	"Icon": "imgs/plugin/marketplace",
-	"SDKVersion": 2,
+	"SDKVersion": 3,
 	"Software": {
-		"MinimumVersion": "6.4"
+		"MinimumVersion": "6.9"
 	},
 	"OS": [
 		{
