@@ -1,4 +1,4 @@
-import streamDeck, { action, KeyDownEvent, SingletonAction, WillAppearEvent, PropertyInspectorDidAppearEvent, JsonValue, SendToPluginEvent, DidReceiveSettingsEvent, JsonObject } from "@elgato/streamdeck";
+import { action, KeyDownEvent, SingletonAction } from "@elgato/streamdeck";
 import { MotuApi } from "../motu-avb-api";
 
 /**

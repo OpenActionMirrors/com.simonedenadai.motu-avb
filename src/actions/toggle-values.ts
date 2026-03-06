@@ -1,4 +1,5 @@
-import streamDeck, { action, KeyDownEvent, SingletonAction, WillAppearEvent, PropertyInspectorDidAppearEvent, JsonValue, SendToPluginEvent, DidReceiveSettingsEvent, JsonObject } from "@elgato/streamdeck";
+import streamDeck, { action, KeyDownEvent, SingletonAction, SendToPluginEvent, DidReceiveSettingsEvent } from "@elgato/streamdeck";
+import type { JsonValue, JsonObject } from "@elgato/utils";
 import { MotuApi } from "../motu-avb-api";
 
 /**
@@ -102,7 +103,7 @@ export class ToggleValues extends SingletonAction<ToggleValuesSettings> {
             // Filter for boolean and float endpoints
             const endpoints = Object.keys(datastore).filter((endpoint) => this.motuApi.allRegex.test(endpoint));
             
-            await streamDeck.ui.current?.sendToPropertyInspector({
+            await streamDeck.ui.sendToPropertyInspector({
                 event, 
                 items: endpoints.map((endpoint) => ({label: endpoint, value: endpoint})),
             });
